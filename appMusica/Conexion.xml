@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DatosDeConexion>
+    <server>localhost</server>
+    <database>app_musica2</database>
+    <username>root</username>
+    <password></password>
+</DatosDeConexion>

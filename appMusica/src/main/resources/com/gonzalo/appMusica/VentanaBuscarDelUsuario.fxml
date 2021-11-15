@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gonzalo.appMusica.VentanaBuscarUsuarioController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="DISCO">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane layoutY="94.0" prefHeight="200.0" prefWidth="406.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <top>
+                              <GridPane prefHeight="41.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#MostrarTodosDiscos" text="Mostrar Todos" GridPane.halignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                           </top>
+                           <right>
+                              <GridPane prefHeight="340.0" prefWidth="222.0" BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="146.99998321533204" minHeight="10.0" prefHeight="146.99998321533204" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="108.60001220703126" minHeight="10.0" prefHeight="79.80001678466797" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <ImageView fitHeight="116.0" fitWidth="222.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <GridPane GridPane.rowIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="114.0" text="Numero canciones: " GridPane.halignment="CENTER">
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="labelNCanciones" text="Label" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <Button mnemonicParsing="false" onAction="#MostrarCancionesMenuDiscos" text="Mostrar canciones" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                           </right>
+                           <center>
+                              <TableView fx:id="tablaDisco" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                <columns>
+                                  <TableColumn fx:id="nombreDisco" prefWidth="114.4000244140625" text="Nombre" />
+                                  <TableColumn fx:id="artistaDisco" prefWidth="110.39996337890625" text="Artista" />
+                                    <TableColumn fx:id="fechaProduccionDisco" prefWidth="175.20001220703125" text="Fecha produccion" />
+                                </columns>
+                              </TableView>
+                           </center>
+                        </BorderPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="CANCION">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane layoutX="215.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <top>
+                              <GridPane BorderPane.alignment="CENTER">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#MostrarTodosCanciones" text="Mostrar Todos" GridPane.halignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                           </top>
+                           <center>
+                              <TableView fx:id="tablaCancion" prefHeight="330.0" prefWidth="496.0" BorderPane.alignment="CENTER">
+                                <columns>
+                                  <TableColumn fx:id="nombreCancion" prefWidth="140.0" text="Nombe" />
+                                  <TableColumn fx:id="duracionCancion" prefWidth="136.79998779296875" text="Duracion" />
+                                    <TableColumn fx:id="discoCancion" prefWidth="115.199951171875" text="Disco" />
+                                    <TableColumn fx:id="generoCancion" prefWidth="113.5999755859375" text="Genero" />
+                                    <TableColumn fx:id="nºReproduciones" prefWidth="95.2000732421875" text="NºRep" />
+                                </columns>
+                                 <BorderPane.margin>
+                                    <Insets top="10.0" />
+                                 </BorderPane.margin>
+                              </TableView>
+                           </center>
+                        </BorderPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="LISTAS DE REPRODUCCION">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane layoutX="216.0" layoutY="94.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <top>
+                              <GridPane prefHeight="42.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#MostrarTodosListasRep" text="Mostrar Todos" GridPane.halignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                           </top>
+                           <right>
+                              <GridPane prefHeight="341.0" prefWidth="212.0" BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#SeguirLista" text="Seguir" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button mnemonicParsing="false" onAction="#DejarDeSegirLista" text="Dejar de seguir" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </right>
+                           <center>
+                              <TableView fx:id="tablaLista" prefHeight="327.0" prefWidth="388.0" BorderPane.alignment="CENTER">
+                                <columns>
+                                  <TableColumn fx:id="nombreListaRep" prefWidth="113.0" resizable="false" text="Nombre" />
+                                  <TableColumn fx:id="descripcionListaRep" prefWidth="163.0" resizable="false" text="Descripcion" />
+                                    <TableColumn fx:id="CreadorListaRep" prefWidth="111.0" resizable="false" text="Creador" />
+                                </columns>
+                              </TableView>
+                           </center>
+                        </BorderPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

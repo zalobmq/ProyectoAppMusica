@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gonzalo.appMusica.MostrarCancionesDiscoUsuario">
+   <children>
+      <TableView fx:id="tablaCancion" layoutX="176.0" layoutY="88.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="nombreCancion" prefWidth="150.0" text="Nombre" />
+          <TableColumn fx:id="duracionCancion" prefWidth="130.0" text="Duracion" />
+            <TableColumn fx:id="discoCancion" prefWidth="90.0" text="Disco" />
+            <TableColumn fx:id="generoCancion" prefWidth="95.0" text="Genero" />
+            <TableColumn fx:id="nºReproduciones" prefWidth="134.0" text="nº Reproducciones" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
