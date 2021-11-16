@@ -20,7 +20,7 @@ public class DiscoDAO extends Disco{
 	 */
 	
 	//AÑADIR DISCO
-	private final static String AÑADIR="INSER INTO disco (id,nombre,foto,id_artista,fecha_produccion)"; 
+	private final static String AÑADIR="INSERT INTO disco (id,nombre,foto,id_artista,fecha_produccion) VALUES(?,?,?,?,?)"; 
 	//BORRAR
 	private final static String BORRAR="DELETE FROM disco WHERE (nombre = ?)AND(id_artista = ?)";
 	//MUESTRA TODOS LOS DISCOS 
@@ -51,7 +51,7 @@ public class DiscoDAO extends Disco{
 	/*
 	 * Añadir disco , recibe el artista actual , para setear su id.
 	 */
-	public int añadir(Artista a) {
+	public int añadir() {
 		int result = 0;
 		Connection con = Conexion.getConexion(UtilidadXml.unmarshal("Conexion.xml"));
 		if(con != null) {
@@ -60,8 +60,8 @@ public class DiscoDAO extends Disco{
 				PreparedStatement q = con.prepareStatement(AÑADIR);
 				q.setInt(1, this.id);
 				q.setString(2, this.nombre);
-				q.setString(3, this.foto);	
-				q.setInt(4, a.getId());
+				q.setString(3, "iconoDisco.png");	
+				q.setInt(4, this.id_Artista);
 				q.setDate(5, this.fecha_produccion);
 				result = q.executeUpdate();	
 			} catch (SQLException e) {
@@ -131,8 +131,8 @@ public class DiscoDAO extends Disco{
 	}	
 
 
-	public ArrayList<Disco> buscarPorArtista(int idDelArtista){
-		ArrayList<Disco> result = new ArrayList<Disco>();
+	public  static List<Disco> buscarPorArtista(int idDelArtista){
+		List<Disco> result = new ArrayList<Disco>();
 		Connection con = Conexion.getConexion(UtilidadXml.unmarshal("Conexion.xml"));
 		if(con != null) {
 			try {

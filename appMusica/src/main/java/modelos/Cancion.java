@@ -2,12 +2,12 @@ package modelos;
 
 public class Cancion {
 
-	private int id;
-	private String nombre;
-	private int duracion;	//En segundos
-	private int nReproducciones;
-	private int id_disco;
-	private int id_genero;
+	protected int id;
+	protected String nombre;
+	protected int duracion;	//En segundos
+	protected int nReproducciones;
+	protected int id_disco;
+	protected int id_genero;
 	
 	
 	public Cancion() {

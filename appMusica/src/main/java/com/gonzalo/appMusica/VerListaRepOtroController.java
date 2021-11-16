@@ -68,13 +68,7 @@ private static  ListaDeReproduccion listaSelecion;
 		 
 		 l=l.Mostrar_lista_x_id(listaSelecion);
 		 
-		// System.out.println(l.toString());
 		 u=u.buscarUsuarioId(l.getId_usuario());
-		 /*
-		 nombreLista.setText(l.getNombre());
-		 descripcionLista.setText(l.getDescripcion());
-		 nombre_creadorLista.setText(u.getNombre());
-		 */
 		 nombreLista.setText(l.getNombre());
 		 descripcionLista.setText(l.getDescripcion());
 		 nombre_creadorLista.setText(u.getNombre());

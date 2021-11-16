@@ -37,6 +37,8 @@ public class InicioSesionArtistaController {
     			
     			VentanaPrincipalArtistaController.setArtista(artista);
     			PerfilArtistaController.setArtista(artista);
+    			VentanaDiscosArtistaController.setArtista(artista);
+    			CrearDiscoV1Controller.setArtista(artista);
     			App.loadScene(new Stage(), "VentanaPrincipalArtista", "Ventana Principal Artista");
     			
     		} catch (IOException e) {

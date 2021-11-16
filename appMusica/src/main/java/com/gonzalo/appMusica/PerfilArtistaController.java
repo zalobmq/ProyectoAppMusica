@@ -37,24 +37,10 @@ public class PerfilArtistaController {
 		
 		esteArtista = a;	
     }
-	
-	/* 
-	public  Artista infoArtistaBD(Artista a) {
-		
-		ArtistaDAO art = new ArtistaDAO();
-		art.infoUsuario(esteArtista);
-		return art;
-		
-	}
-	
-	*/
+
 		 
 	@FXML
-	private void escribirNombreEnLabel (Artista a) {
-	   // ArtistaDAO art= new ArtistaDAO(a.getNombre(),a.getContraseña());
-	    
-	   
-	    
+	private void escribirNombreEnLabel (Artista a) {	    
     	NombreArtista.setText(a.getNombre());
 	
 	}

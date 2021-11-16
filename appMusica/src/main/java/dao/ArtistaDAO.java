@@ -61,7 +61,7 @@ public class ArtistaDAO extends Artista{
 				PreparedStatement q = con.prepareStatement(AÑADIR);
 				q.setString(1, this.nombre);
 				q.setString(2, this.nacionalidad);
-				q.setString(3, "default");
+				q.setString(3, "iconoUsuarioInicioSesion.png");
 				q.setString(4, this.contraseña);
 				result = q.executeUpdate();	
 			} catch (SQLException e) {

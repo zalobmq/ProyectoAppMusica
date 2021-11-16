@@ -44,6 +44,34 @@ public class CancionDAO extends Cancion{
 		
 	}
 	
+	public CancionDAO(int id, String nombre, int duracion,int nReproducciones, int id_disco, int id_genero) {
+		super(id,nombre,duracion,nReproducciones,id_disco,id_genero);
+	}
+	
+	
+	public int añadir() {
+		int result = 0;
+		Connection con = Conexion.getConexion(UtilidadXml.unmarshal("Conexion.xml"));
+		if(con != null) {
+			
+			try {
+				PreparedStatement q = con.prepareStatement(AÑADIR);
+				q.setInt(1, this.id);
+				q.setString(2, this.nombre);
+				q.setInt(3, 2);	
+				q.setInt(4, 0);
+				q.setInt(5, this.id_genero);
+				q.setInt(6, this.id_disco);
+
+				result = q.executeUpdate();	
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return result;
+	}
+	
 	public static CancionDAO cancion_x_id(int idCancion) {
 		
 		CancionDAO result = new CancionDAO();

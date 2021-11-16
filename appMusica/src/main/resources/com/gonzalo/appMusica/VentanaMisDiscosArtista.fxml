@@ -5,14 +5,13 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="450.0" snapToPixel="false" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gonzalo.appMusica.VentanDiscosArtistaController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="450.0" snapToPixel="false" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gonzalo.appMusica.VentanaDiscosArtistaController">
    <bottom>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -20,21 +19,13 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Button mnemonicParsing="false" onAction="#nuevo" text="Nuevo" GridPane.halignment="CENTER" />
-            <Button mnemonicParsing="false" onAction="#borrar" text="Borrar" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-            <Button mnemonicParsing="false" onAction="#editar" text="Editar" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-         </children>
       </GridPane>
    </bottom>
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tablaDisco" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-            <TableColumn fx:id="NombreDisco" editable="false" prefWidth="289.0" resizable="false" text="Nombre" />
-            <TableColumn editable="false" prefWidth="160.0" resizable="false" text="Fecha produccion" />
+            <TableColumn fx:id="nombreDisco" editable="false" prefWidth="250.40002745389938" resizable="false" text="Nombre" />
+            <TableColumn fx:id="fechaProduccionDisco" editable="false" prefWidth="199.19993591308594" resizable="false" text="Fecha produccion" />
         </columns>
       </TableView>
    </center>
@@ -49,7 +40,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" text="Mostrar todos" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#mostrarTodos" text="Mostrar todos" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
             <Label text="DISCOS" GridPane.halignment="CENTER">
                <font>
                   <Font size="14.0" />
@@ -71,14 +62,6 @@
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
-                     <children>
-                        <Button mnemonicParsing="false" text="Buscar" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
-                           <GridPane.margin>
-                              <Insets right="5.0" />
-                           </GridPane.margin>
-                        </Button>
-                        <TextField promptText="Nombre" />
-                     </children>
                   </GridPane>
                </children>
             </GridPane>
